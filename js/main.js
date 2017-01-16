@@ -91,6 +91,21 @@ var valor = document.getElementById("input-password").value;
   }
 }
 
+function validateSelect(_evt){
+	var type = document.querySelector("select").value;
+	var mensaje = document.getElementById("mensaje1");
+	
+	if(type == 0){
+		mensaje.innerHTML="<h6><b>No se selecciono ninguna opción!</b></h6>";
+	}else{
+		mensaje.innerHTML="";
+	}
+}
+
+function validateForm(){
+	validateSelect();
+}
+
 
 
 
