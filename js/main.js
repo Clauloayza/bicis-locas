@@ -74,9 +74,9 @@ function validadoNumber(_evt){
 function validateForm(){
 	var correo= document.getElementById("input-email").value;
 	
-	var expresion= /\w+@\w+\.+[a-z]/;
+	//var expresion= /\w+@+\w+[.]+[a-z]/g;
 	
-	if(!expresion.test(correo)){
+	if(!/([\w(-_.)]+[@][\w]+[.][\w]+)/g.test(correo)){
 		alert ("Email no válido");
 	}else
 		return false;
